@@ -1,15 +1,21 @@
+#!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
+
 library(ggplot2)
 
-read.csv("regrex1.csv")
+csv_data <- read.csv(args[1])
+print(args[1])
 
-regrex1 <- read.csv("regrex1.csv")
+ggplot(csv_data, aes(x,y)) + geom_point()
 
-ggplot(regrex1, aes(x,y)) + geom_point()
+ggsave("Scatterplot_R.png")
 
-ggplot(regrex1, aes(x,y)) + geom_point() + geom_smooth(method = "lm", se = F)
+ggplot(csv_data, aes(x,y)) + geom_point() + geom_smooth(method = "lm", se = F)
 
-linmod <- lm(y ~ x, data = regrex1)
+ggsave("Scatterplot_LM_R.png")
+
+linmod <- lm(y ~ x, data = csv_data)
 summary(linmod)
 
-plot(y ~ x, data = regrex1)
+plot(y ~ x, data = csv_data)
 abline(linmod)
