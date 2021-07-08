@@ -8,11 +8,11 @@ print(args[1])
 
 ggplot(csv_data, aes(x,y)) + geom_point()
 
-ggsave("Scatterplot_R.png")
+ggsave("r_orig.png")
 
 ggplot(csv_data, aes(x,y)) + geom_point() + geom_smooth(method = "lm", se = F)
 
-ggsave("Scatterplot_LM_R.png")
+ggsave("r_lm.png")
 
 linmod <- lm(y ~ x, data = csv_data)
 summary(linmod)
