@@ -10,11 +10,23 @@ dependencies:
   - r-ggplot2
   - r-reshape2
   - r-tidyverse
+  - r-DESeq2
+  - r-RColorBrewer
+  - r-ggrepel
+  - r-scales
+  - r-genefilter
+  - r-pheatmap
+  - r-ggbeeswarm
+  - r-apeglm
+  - r-qvalue
+  - r-pcaExplorer
+  - r-AnnotationDbi
+  - r-DOSE
+  - r-enrichplot
+  - r-pathview
+  - r-clusterProfiler
   - pip
   - pip:
     - pandas
     - matplotlib
     - numpy
-    - scipy
-    - seaborn
-    - scikit-learn
